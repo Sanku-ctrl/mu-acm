@@ -176,13 +176,14 @@ footer h5 {
     overflow: hidden;
     background: #fff;
     box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-    transition: var(--transition-smooth);
+    transition: box-shadow 0.4s ease;
     border: 1px solid var(--acm-light-gray);
     height: 100%;
+    transform-style: preserve-3d;
 }
 .team-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    transform: none;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
 }
 .team-card-img-wrapper {
     position: relative;

@@ -22,6 +22,7 @@ This project is built as a highly modular Multi-Page Application (MPA) to ensure
 ├── events.html      # Feed of upcoming and past chapter events
 ├── index.html       # Dynamic landing page 
 └── team.html        # Interactive grid of current chapter leadership
+```
 
 ## Features
 

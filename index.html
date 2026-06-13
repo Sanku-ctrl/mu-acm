@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACM MU Chapter | Mahindra University</title>
+    <meta name="description" content="Welcome to the ACM Student Chapter at Mahindra University - Fostering innovation, collaboration, and technical excellence.">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- @include('components.navbar') START -->
+    <nav class="navbar navbar-expand-lg sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/acm_main_logo.svg" alt="ACM Logo" height="40" class="me-2">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="team.html">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="buddy.html">Buddy System</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- @include('components.navbar') END -->
+
+    <!-- Hero Section -->
+    <header class="hero-section section-padding d-flex align-items-center min-vh-100">
+        <div class="container hero-content">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h1 class="display-3 hero-title fw-bold mb-4">Empowering <br><span style="color: var(--acm-primary-blue);">Tech Innovators</span> <br>at Mahindra.</h1>
+                    <p class="lead hero-subtitle mb-5 text-muted">Join the most vibrant community of coders, creators, and problem solvers. Bridge the gap between academia and real-world tech.</p>
+                    <div class="hero-btn">
+                        <a href="about.html" class="btn btn-primary btn-lg me-3">Discover More</a>
+                        <a href="events.html" class="btn btn-outline-primary btn-lg">View Events</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center hero-image">
+                    <!-- Placeholder for an engaging 3D illustration or interactive element -->
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Students coding" class="img-fluid rounded-4 shadow-lg" style="object-fit: cover; height: 500px; width: 100%;">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Bento Grid Section -->
+    <section class="bento-section section-padding bg-white">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center gsap-reveal">
+                    <h2 class="display-5">Why Join ACM MU?</h2>
+                    <p class="lead text-muted">A sneak peek into what makes our chapter unique.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4 bento-grid-container">
+                <div class="col-lg-8 bento-grid-item">
+                    <div class="bento-card bento-card-dark d-flex flex-column justify-content-center p-5">
+                        <h3 class="mb-3">Cutting-Edge Learning</h3>
+                        <p class="fs-5 mb-0">From AI and Machine Learning to Web Dev and Cybersecurity. We organize regular workshops and peer-learning sessions to keep you ahead of the curve.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 bento-grid-item">
+                    <div class="bento-card text-center d-flex flex-column justify-content-center align-items-center p-5">
+                        <h1 class="display-1 fw-bold text-primary mb-0">50+</h1>
+                        <p class="lead mb-0 text-muted">Events Hosted</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 bento-grid-item">
+                    <div class="bento-card">
+                        <h4 class="mb-3">Global Network</h4>
+                        <p class="text-muted">As a student-led organization affiliated with the prestigious ACM, gain access to global resources, competitions like ACM-ICPC, and international communities.</p>
+                        <a href="#" class="btn btn-link px-0">Read More &rarr;</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 bento-grid-item">
+                    <div class="bento-card" style="background-color: var(--acm-bg-light);">
+                        <h4 class="mb-3">Buddy System</h4>
+                        <p class="text-muted">Find mentors and coding partners. Connect, collaborate, and compete on our leaderboard.</p>
+                        <a href="buddy.html" class="btn btn-outline-primary btn-sm mt-2">Find a Buddy</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 bento-grid-item">
+                    <div class="bento-card text-center d-flex flex-column justify-content-center align-items-center p-5">
+                        <h1 class="display-1 fw-bold mb-0" style="color: var(--acm-accent);">300+</h1>
+                        <p class="lead mb-0 text-muted">Active Members</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- @include('components.footer') START -->
+    <footer>
+        <div class="container py-4">
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <img src="assets/acm_white_logo.svg" alt="ACM White Logo" height="50" class="mb-3">
+                    <p class="text-white-50">Empowering the next generation of computing professionals at Mahindra University.</p>
+                </div>
+                <div class="col-lg-2 offset-lg-2">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="team.html">Our Team</a></li>
+                        <li class="mb-2"><a href="events.html">Events</a></li>
+                        <li class="mb-2"><a href="buddy.html">Buddy System</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-3">Connect With Us</h5>
+                    <p class="text-white-50">Follow us on social media for the latest updates.</p>
+                    <div class="d-flex gap-3">
+                        <!-- Social Icons Placeholders -->
+                        <a href="#" class="text-white fs-4">Ig</a>
+                        <a href="#" class="text-white fs-4">Li</a>
+                        <a href="#" class="text-white fs-4">X</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-5 mb-4 border-white-50">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 text-white-50">&copy; 2026 ACM MU Chapter. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0 text-white-50">Built with <span class="text-danger">&hearts;</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- @include('components.footer') END -->
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

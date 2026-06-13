@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buddy System & Leaderboard | ACM MU Chapter</title>
+    <meta name="description" content="Connect with coding partners and track your progress on the ACM MU Leaderboard.">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        /* Custom styles specific to the Buddy System UI */
+        .leaderboard-table {
+            background-color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            border: 1px solid var(--acm-light-gray);
+        }
+        .leaderboard-table th {
+            background-color: var(--acm-bg-light);
+            color: var(--acm-dark-blue);
+            font-family: var(--font-heading);
+            padding: 15px 20px;
+        }
+        .leaderboard-table td {
+            padding: 15px 20px;
+            vertical-align: middle;
+        }
+        .rank-badge {
+            background-color: var(--acm-primary-blue);
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-weight: bold;
+        }
+        .rank-1 { background-color: #FFD700; color: #000; }
+        .rank-2 { background-color: #C0C0C0; color: #000; }
+        .rank-3 { background-color: #CD7F32; color: #fff; }
+
+        .buddy-card {
+            border: 1px solid var(--acm-light-gray);
+            border-radius: 12px;
+            padding: 20px;
+            background-color: #fff;
+            transition: var(--transition-smooth);
+        }
+        .buddy-card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transform: translateY(-5px);
+        }
+        .tag {
+            background-color: var(--acm-bg-light);
+            color: var(--acm-dark-blue);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- @include('components.navbar') START -->
+    <nav class="navbar navbar-expand-lg sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/acm_main_logo.svg" alt="ACM Logo" height="40" class="me-2">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="buddy.html">Buddy System</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- @include('components.navbar') END -->
+
+    <header class="section-padding bg-light pb-0 pt-5">
+        <div class="container text-center gsap-reveal">
+            <h1 class="display-3 mb-4">Connect & <span style="color: var(--acm-primary-blue);">Compete</span></h1>
+            <p class="lead text-muted mx-auto" style="max-width: 700px;">
+                Find coding partners to build projects together and climb the ACM MU Leaderboard.
+            </p>
+        </div>
+    </header>
+
+    <section class="section-padding pb-5">
+        <div class="container">
+            <div class="row">
+                
+                <!-- Buddy Matching Interface -->
+                <div class="col-lg-8 mb-5 mb-lg-0 gsap-reveal">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2>Find a Buddy</h2>
+                        <button class="btn btn-outline-primary btn-sm">Filter</button>
+                    </div>
+                    
+                    <!-- [SUBJECT TO CHANGE] - Awaiting backend integration logic -->
+                    <!-- The container where Buddy Cards will be dynamically injected -->
+                    <div id="buddy-container" class="row g-4">
+                        <!-- Content injected via JS -->
+                    </div>
+                </div>
+
+                <!-- Leaderboard Sidebar -->
+                <div class="col-lg-4 gsap-reveal">
+                    <h2 class="mb-4">Leaderboard</h2>
+                    
+                    <!-- [SUBJECT TO CHANGE] - Awaiting backend integration logic -->
+                    <div class="table-responsive leaderboard-table">
+                        <table class="table table-hover mb-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col" style="width: 20%;">Rank</th>
+                                    <th scope="col" style="width: 60%;">Member</th>
+                                    <th scope="col" style="width: 20%;">Points</th>
+                                </tr>
+                            </thead>
+                            <tbody id="leaderboard-body">
+                                <!-- Content injected via JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="text-center mt-3">
+                        <a href="#" class="text-muted small">View Full Leaderboard</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- @include('components.footer') START -->
+    <footer>
+        <div class="container py-4">
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <img src="assets/acm_white_logo.svg" alt="ACM White Logo" height="50" class="mb-3">
+                    <p class="text-white-50">Empowering the next generation of computing professionals at Mahindra University.</p>
+                </div>
+                <div class="col-lg-2 offset-lg-2">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="team.html">Our Team</a></li>
+                        <li class="mb-2"><a href="events.html">Events</a></li>
+                        <li class="mb-2"><a href="buddy.html">Buddy System</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-3">Connect With Us</h5>
+                    <p class="text-white-50">Follow us on social media for the latest updates.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white fs-4">Ig</a>
+                        <a href="#" class="text-white fs-4">Li</a>
+                        <a href="#" class="text-white fs-4">X</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-5 mb-4 border-white-50">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 text-white-50">&copy; 2026 ACM MU Chapter. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0 text-white-50">Built with <span class="text-danger">&hearts;</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- @include('components.footer') END -->
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+
+    <!-- [SUBJECT TO CHANGE] - Awaiting backend integration logic -->
+    <script>
+        // Placeholder Data representing a future database response
+        const mockBuddies = [
+            { id: 1, name: "Alice Johnson", role: "Frontend Developer", tags: ["React", "CSS", "UI/UX"], lookingFor: "Backend Dev for Hackathon" },
+            { id: 2, name: "Bob Smith", role: "AI Enthusiast", tags: ["Python", "TensorFlow", "Math"], lookingFor: "Study Partner for ML Course" },
+            { id: 3, name: "Charlie Davis", role: "Full Stack Engineer", tags: ["Node.js", "MongoDB", "Vue"], lookingFor: "Open Source Contributor" },
+            { id: 4, name: "Diana Prince", role: "Cybersecurity Analyst", tags: ["Kali Linux", "Networks", "CTF"], lookingFor: "CTF Team Members" }
+        ];
+
+        const mockLeaderboard = [
+            { rank: 1, name: "Alice Johnson", points: 1250 },
+            { rank: 2, name: "Evan Wright", points: 1100 },
+            { rank: 3, name: "Bob Smith", points: 950 },
+            { rank: 4, name: "Diana Prince", points: 820 },
+            { rank: 5, name: "Charlie Davis", points: 700 }
+        ];
+
+        // Render Buddies
+        const buddyContainer = document.getElementById('buddy-container');
+        mockBuddies.forEach(buddy => {
+            const tagsHTML = buddy.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+            const cardHTML = `
+                <div class="col-md-6">
+                    <div class="buddy-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-light rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; font-weight: bold; color: var(--acm-dark-blue);">
+                                ${buddy.name.charAt(0)}
+                            </div>
+                            <div>
+                                <h5 class="mb-0">${buddy.name}</h5>
+                                <span class="text-muted small">${buddy.role}</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            ${tagsHTML}
+                        </div>
+                        <p class="small mb-3"><strong>Looking for:</strong> ${buddy.lookingFor}</p>
+                        <button class="btn btn-outline-primary btn-sm w-100">Connect</button>
+                    </div>
+                </div>
+            `;
+            buddyContainer.innerHTML += cardHTML;
+        });
+
+        // Render Leaderboard
+        const leaderboardBody = document.getElementById('leaderboard-body');
+        mockLeaderboard.forEach(user => {
+            let rankClass = user.rank <= 3 ? `rank-${user.rank}` : '';
+            const rowHTML = `
+                <tr>
+                    <td><div class="rank-badge ${rankClass}">${user.rank}</div></td>
+                    <td class="fw-bold">${user.name}</td>
+                    <td class="text-primary fw-bold">${user.points}</td>
+                </tr>
+            `;
+            leaderboardBody.innerHTML += rowHTML;
+        });
+    </script>
+</body>
+</html>

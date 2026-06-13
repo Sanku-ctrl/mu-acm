@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | ACM MU Chapter</title>
+    <meta name="description" content="Learn more about the ACM Student Chapter at Mahindra University.">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- @include('components.navbar') START -->
+    <nav class="navbar navbar-expand-lg sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/acm_main_logo.svg" alt="ACM Logo" height="40" class="me-2">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="team.html">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="buddy.html">Buddy System</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- @include('components.navbar') END -->
+
+    <!-- Page Header -->
+    <header class="section-padding bg-light pb-0 pt-5">
+        <div class="container text-center gsap-reveal">
+            <h1 class="display-3 mb-4">About <span style="color: var(--acm-primary-blue);">ACM MU</span></h1>
+            <p class="lead text-muted mx-auto" style="max-width: 700px;">
+                Fostering a culture of innovation, collaboration, and technical excellence among students.
+            </p>
+        </div>
+    </header>
+
+    <!-- About Content Section -->
+    <section class="section-padding pb-5">
+        <div class="container">
+            <div class="row align-items-center mb-5 gsap-reveal">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Students collaborating" class="img-fluid rounded-4 shadow-sm" style="height: 400px; width: 100%; object-fit: cover;">
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <h2 class="mb-4">Our Mission</h2>
+                    <p class="text-muted fs-5 lh-lg">
+                        The ACM Chapter at Mahindra University serves as a vibrant hub for technology enthusiasts, aspiring innovators, and passionate learners. Our chapter is dedicated to fostering a culture of innovation, collaboration, and technical excellence among students.
+                    </p>
+                    <p class="text-muted fs-5 lh-lg">
+                        As a student-led organization affiliated with the prestigious Association for Computing Machinery (ACM), the chapter aims to bridge the gap between academic knowledge and real-world application.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row align-items-center mb-5 flex-lg-row-reverse gsap-reveal">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Hackathon event" class="img-fluid rounded-4 shadow-sm" style="height: 400px; width: 100%; object-fit: cover;">
+                </div>
+                <div class="col-lg-6 pe-lg-5">
+                    <h2 class="mb-4">Community & Inclusivity</h2>
+                    <p class="text-muted fs-5 lh-lg">
+                        At the ACM Chapter, we believe in inclusivity and the power of community. Our initiatives encourage interdisciplinary collaboration, inviting students from diverse academic backgrounds to join hands and create impactful solutions for complex problems.
+                    </p>
+                    <p class="text-muted fs-5 lh-lg">
+                        We actively participate in ACM-sponsored competitions, giving our members a chance to showcase their skills on national and global platforms. The chapter is committed to mentoring through peer learning programs, career guidance, and project showcases.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row mb-5 justify-content-center text-center gsap-reveal">
+                <div class="col-lg-10">
+                    <div class="bento-card bento-card-dark p-5">
+                        <h2 class="mb-4 text-white">Beyond Academics</h2>
+                        <p class="fs-5 lh-lg mb-0 text-white-50">
+                            The ACM Chapter emphasizes the importance of ethical computing and social responsibility. We strive to leverage technology for the greater good by organizing projects and activities focused on sustainability, accessibility, and community welfare. Whether you're a seasoned coder, a curious beginner, or someone passionate about technology's potential to shape the future, the ACM Chapter at Mahindra University offers you an unparalleled opportunity to learn, grow, and make a difference. Together, let's code, innovate, and transform ideas into reality!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- @include('components.footer') START -->
+    <footer>
+        <div class="container py-4">
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <img src="assets/acm_white_logo.svg" alt="ACM White Logo" height="50" class="mb-3">
+                    <p class="text-white-50">Empowering the next generation of computing professionals at Mahindra University.</p>
+                </div>
+                <div class="col-lg-2 offset-lg-2">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="team.html">Our Team</a></li>
+                        <li class="mb-2"><a href="events.html">Events</a></li>
+                        <li class="mb-2"><a href="buddy.html">Buddy System</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-3">Connect With Us</h5>
+                    <p class="text-white-50">Follow us on social media for the latest updates.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white fs-4">Ig</a>
+                        <a href="#" class="text-white fs-4">Li</a>
+                        <a href="#" class="text-white fs-4">X</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-5 mb-4 border-white-50">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 text-white-50">&copy; 2026 ACM MU Chapter. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0 text-white-50">Built with <span class="text-danger">&hearts;</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- @include('components.footer') END -->
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

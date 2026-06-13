@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet The Team | ACM MU Chapter</title>
+    <meta name="description" content="Meet the mentors and student leaders driving the ACM Student Chapter at Mahindra University.">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- @include('components.navbar') START -->
+    <nav class="navbar navbar-expand-lg sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/acm_main_logo.svg" alt="ACM Logo" height="40" class="me-2">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="team.html">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="buddy.html">Buddy System</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- @include('components.navbar') END -->
+
+    <!-- Page Header -->
+    <header class="section-padding bg-light pb-0 pt-5">
+        <div class="container text-center gsap-reveal">
+            <h1 class="display-3 mb-4">Meet the <span style="color: var(--acm-primary-blue);">Team</span></h1>
+            <p class="lead text-muted mx-auto" style="max-width: 700px;">
+                The passionate individuals driving innovation and excellence at ACM MU.
+            </p>
+        </div>
+    </header>
+
+    <!-- Team Section -->
+    <section class="section-padding pb-5">
+        <div class="container">
+            
+            <!-- Mentor Section -->
+            <div class="row justify-content-center mb-5 gsap-reveal">
+                <div class="col-12 text-center mb-4">
+                    <h2 class="h1">Mentor</h2>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-card">
+                        <div class="team-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Mentor">
+                            <div class="team-card-overlay">
+                                <h4>Dr. Jane Doe</h4>
+                                <p>Faculty Advisor & Mentor</p>
+                                <div class="team-social-links">
+                                    <a href="#">Li</a>
+                                    <a href="#">Tw</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4 text-center">
+                            <h4 class="mb-1">Dr. Jane Doe</h4>
+                            <span class="text-primary fw-bold">Faculty Advisor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Executive Board -->
+            <div class="row justify-content-center mb-5 bento-grid-container">
+                <div class="col-12 text-center mb-4 gsap-reveal">
+                    <h2 class="h1">Executive Board</h2>
+                </div>
+                
+                <!-- President -->
+                <div class="col-lg-4 col-md-6 mb-4 bento-grid-item">
+                    <div class="team-card">
+                        <div class="team-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="President">
+                            <div class="team-card-overlay">
+                                <h4>John Smith</h4>
+                                <p>Oversees all chapter operations and drives strategic initiatives.</p>
+                                <div class="team-social-links">
+                                    <a href="#">Li</a>
+                                    <a href="#">Gh</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4 text-center">
+                            <h4 class="mb-1">John Smith</h4>
+                            <span class="text-primary fw-bold">President</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vice President -->
+                <div class="col-lg-4 col-md-6 mb-4 bento-grid-item">
+                    <div class="team-card">
+                        <div class="team-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Vice President">
+                            <div class="team-card-overlay">
+                                <h4>Emily Chen</h4>
+                                <p>Coordinates events and assists the President in leadership duties.</p>
+                                <div class="team-social-links">
+                                    <a href="#">Li</a>
+                                    <a href="#">Gh</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4 text-center">
+                            <h4 class="mb-1">Emily Chen</h4>
+                            <span class="text-primary fw-bold">Vice President</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Treasurer -->
+                <div class="col-lg-4 col-md-6 mb-4 bento-grid-item">
+                    <div class="team-card">
+                        <div class="team-card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Treasurer">
+                            <div class="team-card-overlay">
+                                <h4>Michael Brown</h4>
+                                <p>Manages chapter finances and budgets for events.</p>
+                                <div class="team-social-links">
+                                    <a href="#">Li</a>
+                                    <a href="#">Tw</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4 text-center">
+                            <h4 class="mb-1">Michael Brown</h4>
+                            <span class="text-primary fw-bold">Treasurer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Core Members -->
+            <div class="row justify-content-center bento-grid-container">
+                <div class="col-12 text-center mb-4 gsap-reveal">
+                    <h2 class="h1">Core Members</h2>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4 bento-grid-item">
+                    <div class="team-card">
+                        <div class="team-card-img-wrapper" style="height: 250px;">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Core Member">
+                            <div class="team-card-overlay">
+                                <h5>Sarah Davis</h5>
+                                <p>Technical Head</p>
+                                <div class="team-social-links">
+                                    <a href="#">Gh</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-3 text-center">
+                            <h5 class="mb-1">Sarah Davis</h5>
+                            <span class="text-muted small">Technical Head</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4 bento-grid-item">
+                    <div class="team-card">
+                        <div class="team-card-img-wrapper" style="height: 250px;">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Core Member">
+                            <div class="team-card-overlay">
+                                <h5>David Lee</h5>
+                                <p>Design Lead</p>
+                                <div class="team-social-links">
+                                    <a href="#">Be</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-3 text-center">
+                            <h5 class="mb-1">David Lee</h5>
+                            <span class="text-muted small">Design Lead</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4 bento-grid-item">
+                    <div class="team-card">
+                        <div class="team-card-img-wrapper" style="height: 250px;">
+                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Core Member">
+                            <div class="team-card-overlay">
+                                <h5>Jessica Wong</h5>
+                                <p>Events Coordinator</p>
+                                <div class="team-social-links">
+                                    <a href="#">Li</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-3 text-center">
+                            <h5 class="mb-1">Jessica Wong</h5>
+                            <span class="text-muted small">Events Coordinator</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4 bento-grid-item">
+                    <div class="team-card">
+                        <div class="team-card-img-wrapper" style="height: 250px;">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Core Member">
+                            <div class="team-card-overlay">
+                                <h5>Kevin Miller</h5>
+                                <p>PR & Outreach</p>
+                                <div class="team-social-links">
+                                    <a href="#">Li</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-3 text-center">
+                            <h5 class="mb-1">Kevin Miller</h5>
+                            <span class="text-muted small">PR & Outreach</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- @include('components.footer') START -->
+    <footer>
+        <div class="container py-4">
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <img src="assets/acm_white_logo.svg" alt="ACM White Logo" height="50" class="mb-3">
+                    <p class="text-white-50">Empowering the next generation of computing professionals at Mahindra University.</p>
+                </div>
+                <div class="col-lg-2 offset-lg-2">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="team.html">Our Team</a></li>
+                        <li class="mb-2"><a href="events.html">Events</a></li>
+                        <li class="mb-2"><a href="buddy.html">Buddy System</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-3">Connect With Us</h5>
+                    <p class="text-white-50">Follow us on social media for the latest updates.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white fs-4">Ig</a>
+                        <a href="#" class="text-white fs-4">Li</a>
+                        <a href="#" class="text-white fs-4">X</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-5 mb-4 border-white-50">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 text-white-50">&copy; 2026 ACM MU Chapter. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0 text-white-50">Built with <span class="text-danger">&hearts;</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- @include('components.footer') END -->
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -2,14 +2,14 @@
 
 The official, redesigned website for the Association for Computing Machinery (ACM) Student Chapter at Mahindra University. This project serves as a vibrant, interactive digital hub for technology enthusiasts, showcasing our events, team, and chapter initiatives.
 
-## 🚀 Tech Stack
+## Tech Stack
 
 * **Frontend Framework:** HTML5, CSS3, Vanilla JavaScript
 * **UI Framework:** Bootstrap 5 (Softaculous hosting compliant)
 * **Animations:** GSAP (GreenSock Animation Platform)
 * **Typography:** CMU Serif (Computer Modern) & Inter
 
-## 📂 Project Structure
+## Project Structure
 
 This project is built as a highly modular Multi-Page Application (MPA) to ensure a seamless 1:1 translation into a backend framework in the future. 
 

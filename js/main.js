@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 
     // ==========================================
-    // Advanced Hover States (Magnetic 3D)
+    // Advanced Hover States (Magnetic 3D & Buttons)
     // ==========================================
     const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
     const teamCards = document.querySelectorAll('.team-card');
@@ -113,6 +113,32 @@ document.addEventListener("DOMContentLoaded", (event) => {
                     rotationY: 0,
                     ease: "elastic.out(1, 0.3)",
                     duration: 1.2
+                });
+            });
+        });
+
+        // Magnetic Buttons
+        const magneticBtns = document.querySelectorAll('.btn-primary, .btn-outline-primary');
+        magneticBtns.forEach(btn => {
+            btn.addEventListener('mousemove', (e) => {
+                const rect = btn.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+
+                gsap.to(btn, {
+                    x: x * 0.3,
+                    y: y * 0.3,
+                    duration: 0.4,
+                    ease: "power2.out"
+                });
+            });
+
+            btn.addEventListener('mouseleave', () => {
+                gsap.to(btn, {
+                    x: 0,
+                    y: 0,
+                    duration: 1,
+                    ease: "elastic.out(1, 0.3)"
                 });
             });
         });
